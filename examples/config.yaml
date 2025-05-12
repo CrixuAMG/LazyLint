@@ -1,0 +1,86 @@
+# LazyLint Configuration Example
+
+# UI Configuration
+ui:
+  # Current theme
+  theme: "catppuccin"
+
+  # Custom themes
+  themes:
+    # Default theme (dark)
+    default:
+      name: "default"
+      colors:
+        subtle: "#383838"
+        highlight: "#7D56F4"
+        special: "#73F59F"
+        error: "#FF5F87"
+        warning: "#FFA500"
+        border: "#747474"
+        text: "#DDDDDD"
+        dim_text: "#999999"
+        background: "#1A1A1A"
+
+    # Light theme
+    light:
+      name: "light"
+      colors:
+        subtle: "#D9DCCF"
+        highlight: "#874BFD"
+        special: "#43BF6D"
+        error: "#FF5F87"
+        warning: "#FFA500"
+        border: "#4A4A4A"
+        text: "#1A1A1A"
+        dim_text: "#666666"
+        background: "#FFFFFF"
+
+    # High contrast theme
+    high-contrast:
+      name: "high-contrast"
+      colors:
+        subtle: "#000000"
+        highlight: "#0000FF"
+        special: "#008000"
+        error: "#FF0000"
+        warning: "#FFA500"
+        border: "#000000"
+        text: "#000000"
+        dim_text: "#333333"
+        background: "#FFFFFF"
+
+    # Catppuccin theme
+    catppuccin:
+      name: "catppuccin"
+      colors:
+        subtle: "#6E6C7E"
+        highlight: "#F5C2E7"
+        special: "#ABE9B3"
+        error: "#F28FAD"
+        warning: "#FAE3B0"
+        border: "#96CDFB"
+        text: "#D9E0EE"
+        dim_text: "#988BA2"
+        background: "#1E1E2E"
+
+# Linter Configuration
+linters:
+  phpstan:
+    path: "phpstan"
+    args: ["analyse", "--level=5"]
+    enabled: true
+
+  phpcs:
+    path: "phpcs"
+    args: ["--standard=PSR12"]
+    enabled: true
+
+  golangci-lint:
+    path: "golangci-lint"
+    args: ["run", "--out-format=colored-line-number"]
+    enabled: true
+
+  eslint:
+    path: "eslint"
+    args: ["--format=stylish"]
+    enabled: true

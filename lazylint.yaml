@@ -1,0 +1,23 @@
+linters:
+    eslint:
+        args:
+            - --format=stylish
+        enabled: true
+        path: eslint
+    golangci-lint:
+        args:
+            - run
+            - --out-format=colored-line-number
+        enabled: true
+        path: golangci-lint
+    phpcs:
+        args:
+            - --standard=PSR12
+        enabled: true
+        path: phpcs
+    phpstan:
+        args:
+            - analyse
+            - --level=5
+        enabled: true
+        path: phpstan
